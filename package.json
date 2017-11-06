@@ -1,0 +1,31 @@
+{
+  "name": "grafoman-api",
+  "version": "1.0.0",
+  "description": "grafoman api",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iSperia/grafoman-api.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "grafoman",
+    "write",
+    "scratch"
+  ],
+  "author": "Sergey Kapustin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iSperia/grafoman-api/issues"
+  },
+  "homepage": "https://github.com/iSperia/grafoman-api#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33"
+  }
+}
