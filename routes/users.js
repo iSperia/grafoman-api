@@ -5,8 +5,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get("/", function(httpRequest, httpResponse) {
-	var responseObject = {};
-	responseObject.users = [];
+	var responseObject = [];
 	mongo.db.collection("users").find({}).toArray(function(mongoFindError, mongoFindResponse) {
 		if (mongoFindError) {
 			httpResponse.set(500).send("Database error");
@@ -14,7 +13,7 @@ router.get("/", function(httpRequest, httpResponse) {
 		}
 		console.log(mongoFindResponse);
 		for (var i in mongoFindResponse) {
-			responseObject.users.push({
+			responseObject.push({
 			 	nickname: mongoFindResponse[i].nickname,
 			 	id: mongoFindResponse[i]._id
 			});

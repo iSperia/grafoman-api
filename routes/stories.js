@@ -23,10 +23,10 @@ router.get("/", function(httpRequest, httpResponse) {
 				httpResponse.set(500).send("Database error");
 				return;
 			}
-			var resultObject = {stories:[]};
+			var resultObject = [];
 			for (var i in mongoFindResult) {
 				var story = new Story(mongoFindResult[i]);
-				resultObject.stories.push(story.asJson());
+				resultObject.push(story.asJson());
 			}
 			httpResponse.send(JSON.stringify(resultObject));
 		});
